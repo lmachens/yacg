@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CLI</title>
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="body--dark">
+    <header>
+      🤖 Yet Another Command Guide
+    </header>
+    <main>
+      <div class="terminal-output">
+        Welcome!
+      </div>
+      <div class="cmd">
+        <span class="cmd__prompt">></span><span class="cmd__output"></span
+        ><span class="cmd__cursor">&nbsp;</span>
+        <textarea class="cmd__input" autofocus></textarea>
+      </div>
+    </main>
+    <aside>
+      <iframe id="guide" src="" frameborder="0"></iframe>
+    </aside>
+    <footer>Commands: <code>ls</code> <code>cat</code></footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
