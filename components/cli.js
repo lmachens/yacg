@@ -1,15 +1,19 @@
-import { runCommand } from "./commands.js";
+import { runCommand, getLevel } from "./levels/index.js";
 
 const cmdCursor = document.querySelector(".cmd__cursor");
 const cmdInput = document.querySelector(".cmd__input");
 const cmdOutput = document.querySelector(".cmd__output");
 const terminalOutput = document.querySelector(".terminal-output");
+const commandList = document.getElementById("command-list");
+const cmdPrompt = document.querySelector(".cmd__prompt");
+
 const ENTER_KEY = 13;
 
 export function createPromptLine(command) {
   const line = createLine(command);
   const prompt = document.createElement("span");
-  prompt.innerHTML = ">";
+  const level = getLevel();
+  prompt.innerHTML = level.path;
   prompt.classList = "cmd__prompt";
   line.insertBefore(prompt, line.childNodes[0]);
   return line;
@@ -47,8 +51,23 @@ export function registerKeyUpListener() {
       runCommand(command);
       cmdOutput.innerHTML = "";
       cmdInput.value = "";
+
+      displayCommandList();
+      setPromptPath();
     } else {
       cmdOutput.innerHTML = event.target.value;
     }
   });
+}
+
+export function displayCommandList() {
+  const level = getLevel();
+  commandList.innerHTML = Object.keys(level.commands)
+    .map(command => `<code>${command}</code>`)
+    .join(", ");
+}
+
+function setPromptPath() {
+  const level = getLevel();
+  cmdPrompt.innerHTML = level.path;
 }

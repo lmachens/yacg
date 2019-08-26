@@ -1,9 +1,9 @@
 import {
   startCursorBlink,
   registerCliFocusOnClick,
-  registerKeyUpListener
+  registerKeyUpListener,
+  displayCommandList
 } from "./components/cli.js";
-import { displayCommandList } from "./components/commands.js";
 
 displayCommandList();
 registerCliFocusOnClick();
