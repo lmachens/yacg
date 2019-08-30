@@ -4,7 +4,7 @@ import { writeCommandOutput } from "../cli.js";
 let items = [];
 
 export function addItem(item) {
-  if (hasItem(item.name)) {
+  if (hasItem(item)) {
     return;
   }
   items.push(item);
@@ -27,10 +27,10 @@ export function getItems() {
   return items;
 }
 
-export function getItem(name) {
-  return items.find(existingItem => existingItem.name === name);
+export function getItem(item) {
+  return items.find(existingItem => existingItem.name === item.name);
 }
 
-export function hasItem(name) {
-  return !!getItem(name);
+export function hasItem(item) {
+  return !!getItem(item);
 }

@@ -77,8 +77,18 @@ em {
   color: rgb(59, 184, 184);
 }
 
+.line {
+  display: flex;
+}
+
 code {
   color: rgb(188, 214, 91);
+}
+
+img.item {
+  width: 50px;
+  float: left;
+  margin-right: 4px;
 }
 
 footer {

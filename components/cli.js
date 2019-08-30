@@ -23,12 +23,20 @@ export function createPromptLine(command) {
 
 export function createLine(content) {
   const line = document.createElement("div");
+  line.classList.add("line");
   line.innerHTML = content;
   return line;
 }
 
 export function writeCommandOutput(content) {
   const commandOutputLine = createLine(content);
+  terminalOutput.appendChild(commandOutputLine);
+}
+
+export function writeCommandDialog(content, name) {
+  const commandOutputLine = createLine(
+    `<img src="assets/${name}.jpg" class="item"><div>${content}</div>`
+  );
   terminalOutput.appendChild(commandOutputLine);
 }
 

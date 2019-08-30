@@ -3,13 +3,13 @@ import { ls } from "../commands/ls.js";
 import { pwd } from "../commands/pwd.js";
 import { cat } from "../commands/cat.js";
 import { breakfast } from "../items/breakfast.js";
-import { office } from "./office.js";
+import { mom } from "../items/mom.js";
 
 export const kitchen = {
   type: "level",
   name: "kitchen",
   path: "~/kitchen",
-  childs: [breakfast, office],
+  childs: [breakfast, mom],
   commands: {
     cat: function(props) {
       cat(props, kitchen);
