@@ -37,7 +37,7 @@ export function startCursorBlink() {
 }
 
 export function registerCliFocusOnClick() {
-  document.body.addEventListener("click", function() {
+  document.body.addEventListener("keydown", function() {
     cmdInput.focus();
   });
 }
