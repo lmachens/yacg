@@ -2,10 +2,12 @@ import {
   startCursorBlink,
   registerCliFocusOnClick,
   registerKeyUpListener,
-  displayCommandList
+  displayCommandList,
+  displayItemList
 } from "./components/cli.js";
 
 displayCommandList();
+displayItemList();
 registerCliFocusOnClick();
 registerKeyUpListener();
 startCursorBlink();

@@ -1,4 +1,5 @@
 import { writeCommandOutput } from "../cli.js";
+import { addItem } from "./index.js";
 
 export const notes = {
   type: "item",
@@ -8,5 +9,6 @@ export const notes = {
       Move to a new location with <code>cd LOCATION</code>.<br />
       Interact with things with <code>cat ITEM</code>.<br />
       If you forgot where you are, use the <code>pwd</code> command.`);
+    addItem(notes);
   }
 };
