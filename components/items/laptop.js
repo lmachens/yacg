@@ -5,7 +5,7 @@ export const laptop = {
   type: "item",
   name: "laptop",
   body: function() {
-    writeCommandOutput(`Your laptop.`);
+    writeCommandOutput(`Beep beep. Your personal laptop.`);
     addItem(laptop);
   }
 };
