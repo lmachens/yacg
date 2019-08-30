@@ -17,6 +17,9 @@ export function cd(props, level) {
     if (!child) {
       return writeCommandOutput(`cd: no such file or directory: ${path}`);
     }
+    if (child.type !== "level") {
+      return writeCommandOutput(`cd: ${path} is not a location`);
+    }
     setLevel(child);
   }
 }

@@ -1,28 +1,26 @@
-import { kitchen } from "./kitchen.js";
 import { cd } from "../commands/cd.js";
 import { ls } from "../commands/ls.js";
 import { pwd } from "../commands/pwd.js";
-import { notes } from "../items/notes.js";
 import { cat } from "../commands/cat.js";
-import { office } from "./office.js";
+import { laptop } from "../items/laptop.js";
 
-export const home = {
+export const office = {
   type: "level",
-  name: "home",
-  path: "~",
-  childs: [kitchen, notes, office],
+  name: "office",
+  path: "~/office",
+  childs: [laptop],
   commands: {
     cat: function(props) {
-      cat(props, home);
+      cat(props, office);
     },
     cd: function(props) {
-      cd(props, home);
+      cd(props, office);
     },
     ls: function(props) {
-      ls(props, home);
+      ls(props, office);
     },
     pwd: function(props) {
-      pwd(props, home);
+      pwd(props, office);
     }
   }
 };

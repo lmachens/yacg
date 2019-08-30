@@ -1,10 +1,12 @@
 import { runCommand, getLevel } from "./levels/index.js";
+import { getItems } from "./items/index.js";
 
 const cmdCursor = document.querySelector(".cmd__cursor");
 const cmdInput = document.querySelector(".cmd__input");
 const cmdOutput = document.querySelector(".cmd__output");
 const terminalOutput = document.querySelector(".terminal-output");
-const commandList = document.getElementById("command-list");
+const commandList = document.querySelector("#command-list");
+const itemList = document.querySelector("#item-list");
 const cmdPrompt = document.querySelector(".cmd__prompt");
 
 const ENTER_KEY = 13;
@@ -65,6 +67,13 @@ export function displayCommandList() {
   commandList.innerHTML = Object.keys(level.commands)
     .map(command => `<code>${command}</code>`)
     .join(", ");
+}
+
+export function displayItemList() {
+  const items = getItems();
+  itemList.innerHTML =
+    items.map(item => `<span class="item">${item.name}</span>`).join(", ") ||
+    "No items";
 }
 
 function setPromptPath() {

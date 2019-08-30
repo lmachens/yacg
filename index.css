@@ -68,11 +68,12 @@ ul {
   grid-template-columns: repeat(auto-fit, 100px);
 }
 
-li.level {
+.level {
   color: rgb(100, 100, 255);
 }
 
-li.item {
+.item,
+em {
   color: rgb(59, 184, 184);
 }
 
