@@ -1,8 +1,8 @@
-# Yet Another Command Guide
+# Yet Another Command Game
 
 **Work in progress**
 
-Yet Another Command Guide (YACG) is a command line like web app which displays guides to common commands for Web Developers.
+Yet Another Command Game (YACG) is a command line like web app which displays Games to common commands for Web Developers.
 
 Preview: https://yacg-zjkxjipipd.now.sh/
 

@@ -64,9 +64,20 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+}
+
+li.level {
+  color: rgb(100, 100, 255);
+}
+
+li.item {
+  color: rgb(59, 184, 184);
+}
+
+code {
+  color: rgb(188, 214, 91);
 }
 
 footer {
