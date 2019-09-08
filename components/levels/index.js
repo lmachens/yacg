@@ -11,10 +11,6 @@ export function getLevel() {
   return currentLevel;
 }
 
-export function getSubLevels() {
-  currentLevel.childs.map(name => levels[name]);
-}
-
 export function runCommand(command) {
   const [name, ...other] = command.split(" ");
   const filteredOther = other.filter(cmd => cmd.trim());
